@@ -17,8 +17,8 @@ static GLOBAL: MiMalloc = MiMalloc;
 /// Later `generate-training-data.rs` can be used to roll out these positions.
 fn main() -> std::io::Result<()> {
     // Change the next couple of lines to configure what, how and how much you want to roll out.
-    let phase = OngoingPhase::Race;
-    let amount = 100;
+    let phase = OngoingPhase::Contact;
+    let amount = 100_000;
     let finder_evaluator = CompositeEvaluator::try_default().unwrap_or_exit_with_message();
     find_and_roll_out(finder_evaluator, amount, phase)?;
     Ok(())

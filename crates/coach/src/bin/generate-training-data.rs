@@ -18,7 +18,7 @@ static GLOBAL: MiMalloc = MiMalloc;
 /// The resulting file cannot be read by the Python scripts, they have to be converted first with `convert-to-inputs.rs`.
 fn main() -> std::io::Result<()> {
     // Change the next couple of lines to configure what, how and how much you want to roll out.
-    let phase = OngoingPhase::Race;
+    let phase = OngoingPhase::Contact;
     let rollout_evaluator = CompositeEvaluator::try_default()
         .map(RolloutEvaluator::with_evaluator)
         .unwrap_or_exit_with_message();
